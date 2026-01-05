@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复合选择器</title>
+    <style>
+        /*交集选择器*/
+        p.beauty {
+            color: red;
+        }
+
+        /*并集选择器*/
+        .dog, .pig, #susie {
+            color: orange;
+        }
+
+        /*后代选择器*/
+        ul li {
+            color: red;
+        }
+
+        /*子元素选择器*/
+        div > a {
+            color: green;
+        }
+
+        /*相邻兄弟选择器*/
+        span + p {
+            font-size: 20px;
+        }
+
+        /*通用兄弟选择器*/
+        span ~ p {
+            color: red;
+        }
+
+        /*属性选择器*/
+        [title] { /*含title属性的元素*/
+            font-size: 40px;
+        }
+        [title="stone1"] { /*含title属性且值为stone1的元素*/
+            background-color: pink;
+        }
+        [title^="stone"] { /*含title属性且值以stone开头的元素*/
+            color: blue;
+        }
+        [title$="2"] { /*含title属性且值以2结尾的元素*/
+            color: green;
+        }
+        [title*="pstone"] { /*含title属性且值包含pstone的元素*/
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="beauty">一个div</div>
+<p class="beauty">第1段文本</p>
+<hr>
+<p class="dog">小狗</p>
+<p class="pig">小猪</p>
+<p id="susie">苏西</p>
+<hr>
+<ul>
+    <li>抽烟</li>
+    <li>喝酒</li>
+    <li>烫头</li>
+</ul>
+<ol>
+    <li>张三</li>
+    <li>李四</li>
+    <li>王五</li>
+</ol>
+<hr>
+<div>
+    <a href="#">张三</a>
+    <a href="#">李四</a>
+    <a href="#">王五</a>
+    <p>
+        <a href="#">赵六</a>
+    </p>
+</div>
+<hr>
+<span>span1</span>
+<p>Text1</p>
+<p>Text2</p>
+<p>Text3</p>
+<p>Text4</p>
+<hr>
+<div title="stone1">Stone01</div>
+<div title="stone2">Stone02</div>
+<div title="pstone3">Stone03</div>
+<div title="pstone4">Stone04</div>
+</body>
+</html>
