@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用文本属性</title>
+    <style>
+        /*文本行高*/
+        #d1 {
+            font-size: 40px;
+            background-color: skyblue;
+            /*设置文本行高
+            注意事项：
+            1.line-height不宜过小，一般是font-size的1.5-2倍
+            2.line-height是可以继承的
+            3.line-height与height的关系：若没设置height，则height=line-height*行数
+            应用场景：
+            1.让单行文本垂直居中
+            2.调整多行文字的间距
+            */
+            line-height: 100px;
+        }
+
+        /*vertical-align属性：用于控制元素在行内的垂直对齐方式（可以控制表格单元格内容的垂直对齐）*/
+        #d2 {
+            font-size: 100px;
+            height: 300px;
+            background-color: skyblue;
+        }
+        #d2>span {
+            font-size: 40px;
+            background-color: orange;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div id="d1">我说道：“爸爸，你走吧。”他往车外看了看，说：“我买几个橘子去。你就在此地，不要走动。”</div>
+<br>
+<div id="d2">
+    一段文本<span>单词</span>
+</div>
+</body>
+</html>
