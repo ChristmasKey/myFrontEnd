@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动布局小练习</title>
+    <style>
+        /*清除默认样式*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*自定义浮动样式*/
+        .leftfix {
+            float: left;
+        }
+
+        .rightfix {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /*容器样式*/
+        .container {
+            width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /*头部样式*/
+        .logo, .banner1, .banner2 {
+            background-color: lightgray;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        .banner1 {
+            width: 540px;
+            margin: 0 10px;
+        }
+
+        .banner2 {
+            width: 200px;
+        }
+
+        /*菜单样式*/
+        .menu {
+            height: 30px;
+            line-height: 30px;
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+
+        /*主体样式*/
+        .body {
+            margin-top: 10px;
+        }
+
+        /*左侧元素*/
+        .one, .two {
+            width: 368px;
+            height: 198px;
+            line-height: 198px;
+            border: 1px solid black;
+            margin-right: 10px;
+        }
+
+        .body > .left > .bottom {
+            margin-top: 10px;
+        }
+
+        .three, .four, .five, .six {
+            width: 178px;
+            height: 198px;
+            line-height: 198px;
+            border: 1px solid black;
+            margin-right: 10px;
+        }
+
+        /*右侧元素*/
+        .body > .right > .top, .body > .right > .middle, .body > .right > .bottom {
+            width: 198px;
+            height: 128px;
+            line-height: 128px;
+            border: 1px solid black;
+        }
+
+        .body > .right > .middle {
+            margin: 10px 0;
+        }
+
+        /*页脚样式*/
+        .foot {
+            height: 60px;
+            line-height: 60px;
+            background-color: lightgray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--头部-->
+    <div class="head clearfix">
+        <div class="logo leftfix">logo</div>
+        <div class="banner1 leftfix">banner1</div>
+        <div class="banner2 leftfix">banner2</div>
+    </div>
+    <!--菜单-->
+    <div class="menu">菜单</div>
+    <!--主体-->
+    <div class="body clearfix">
+        <div class="left leftfix">
+            <div class="top clearfix">
+                <div class="one leftfix">栏目一</div>
+                <div class="two leftfix">栏目二</div>
+            </div>
+            <div class="bottom clearfix">
+                <div class="three leftfix">栏目三</div>
+                <div class="four leftfix">栏目四</div>
+                <div class="five leftfix">栏目五</div>
+                <div class="six leftfix">栏目六</div>
+            </div>
+        </div>
+        <div class="right rightfix">
+            <div class="top">栏目七</div>
+            <div class="middle">栏目八</div>
+            <div class="bottom">栏目九</div>
+        </div>
+    </div>
+    <!--页脚-->
+    <div class="foot">页脚</div>
+</div>
+</body>
+</html>

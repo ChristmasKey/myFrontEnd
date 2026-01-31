@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局技巧</title>
+    <style>
+        /*布局一：块级子元素水平、垂直居中*/
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            overflow: hidden;
+        }
+
+        .inner {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            margin: 150px auto 0;
+        }
+
+        /*布局二：行内子元素水平、垂直居中*/
+        #d1 {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            text-align: center;
+            line-height: 400px;
+        }
+
+        #d1 span {
+            background-color: orange;
+            font-size: 20px;
+        }
+
+        /*布局三：行内子元素与行内块级子元素水平、垂直居中*/
+        #d2 {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            text-align: center;
+            line-height: 400px;
+            font-size: 0;
+        }
+
+        #d2 span {
+            background-color: orange;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        #d2 img {
+            width: 100px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner">inner</div>
+</div>
+<hr>
+<div id="d1">
+    <span>Hello</span>
+</div>
+<hr>
+<div id="d2">
+    <span>Hello World</span><img src="../image.png" alt="img">
+</div>
+</body>
+</html>

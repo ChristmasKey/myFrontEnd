@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动后的影响</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .box1, .box2, .box3 {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <!--对兄弟元素的影响：后面的兄弟元素，会占据浮动元素原理的位置，在浮动元素的下面；对前面的兄弟元素无影响。-->
+    <div class="box box4">4</div>
+</div>
+<!--对父元素的影响：不能撑起父元素的高度，导致父元素高度塌陷；但父元素的宽度依然束缚浮动的元素。-->
+<!--<div style="background-color: orange;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam animi aspernatur assumenda cumque deleniti eius eveniet explicabo fugit harum ipsum, iste, iusto maiores natus nesciunt nulla optio porro quia, quos repellat sint temporibus totam. Accusantium assumenda consectetur delectus dolore, dolorem eius eligendi est eveniet fugiat illo illum impedit ipsa iste iure modi nemo neque nobis porro praesentium quaerat qui recusandae reiciendis repudiandae rerum temporibus veritatis voluptatibus. Assumenda consectetur consequatur, consequuntur corporis cum dolorum eaque fuga in modi natus quisquam quod reprehenderit, sed tempore temporibus. At, consectetur culpa doloremque earum illo iusto natus, neque pariatur quaerat quod recusandae, velit veritatis.</div>-->
+</body>
+</html>

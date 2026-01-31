@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素之间的空白问题</title>
+    <style>
+        div:nth-child(1) {
+            height: 400px;
+            background-color: gray;
+            /*通过设置父元素的font-size为0来解决元素之间的空白问题*/
+            font-size: 0;
+        }
+
+        span {
+            font-size: 20px;
+        }
+
+        .s1 {
+            background-color: skyblue;
+        }
+
+        .s2 {
+            background-color: orange;
+        }
+
+        .s3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span class="s1">人之初</span>
+    <span class="s2">性本善</span>
+    <span class="s3">性相近</span>
+    <hr>
+    <img src="../image.png" alt="ima">
+    <img src="../image.png" alt="ima">
+    <img src="../image.png" alt="ima">
+</div>
+</body>
+</html>
